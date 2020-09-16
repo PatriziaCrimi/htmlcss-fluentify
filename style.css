@@ -25,6 +25,12 @@ body li {
   background-color: yellow;
 }
 
+.dropdown-item::after {
+  content: '▼';
+  font-size: 12px;
+  margin-left: 3px;
+}
+
 /* Header */
 header {
   width: 100%;
@@ -35,11 +41,23 @@ nav {
   width: 100%;
   height: 80px;
   background-color: #fff;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 3;
+}
+
+nav .container::after {
+  content '';
+  display: table;
+  clear: both;
 }
 
 nav #main-menu {
+  width: 70%;
   height: 80px;
   line-height: 80px;
+  float: left;
 }
 
 #main-menu::after {
@@ -68,12 +86,6 @@ nav #main-menu {
   z-index: 2;
 }
 
-.menu li a.dropdown-item::after {
-  content: '▼';
-  font-size: 12px;
-  margin-left: 3px;
-}
-
 .menu li.current-item a::before {
   content: '';
   display: inline-block;
@@ -88,11 +100,48 @@ nav #main-menu {
 }
 
 nav #header-buttons {
-
+  width: 30%;
+  float: right;
+  text-align: right;
 }
 
 #header-buttons a {
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-size: 13px;
+  height: 80px;
+  line-height: 80px;
+  margin-right: 16px;
+}
 
+#header-buttons i {
+  font-size: 18px;
+  margin-right: 1px;
+}
+
+#header-buttons a:first-child {
+  border: 1px solid #001A4F;
+  padding: 11px 24px;
+}
+
+#header-buttons a.button-blue:hover {
+  background-color: #001A4F;
+  color: #fff;
+}
+
+#header-buttons a:nth-child(2) {
+  background-color: #64DE82;
+  color: #28a745;
+  padding: 12px 24px;
+}
+
+#header-buttons a.button-green:hover {
+  background-color: #20c997;
+  color: #fff;
+}
+
+#header-buttons a:last-child {
+  margin-right: 0px;
 }
 
 /* Header - Jumbotron */
@@ -101,4 +150,10 @@ nav #header-buttons {
 
   height: 400px;
   background-color: pink;
+}
+
+/* Main */
+main {
+  width: 100%;
+  height: 1500px;
 }
