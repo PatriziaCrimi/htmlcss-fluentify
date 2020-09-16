@@ -17,18 +17,41 @@ body li {
   list-style-type: none;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
 .container {
   width: 70%;
   height: 100%;
   margin: 0 auto;
-
-  background-color: yellow;
 }
 
 .dropdown-item::after {
   content: '▼';
   font-size: 12px;
   margin-left: 3px;
+}
+
+a.button {
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-size: 13px;
+  height: 80px;
+  line-height: 80px;
+  margin-right: 16px;
+}
+
+a.button-green {
+  background-color: #64DE82;
+  color: #28a745;
+  padding: 12px 24px;
+}
+
+a.hover-green:hover {
+  background-color: #20c997;
+  color: #fff;
 }
 
 /* Header */
@@ -44,7 +67,7 @@ nav {
   position: fixed;
   top: 0px;
   left: 0px;
-  z-index: 3;
+  z-index: 2;
 }
 
 nav .container::after {
@@ -70,6 +93,7 @@ nav #main-menu {
   height: 100%;
   padding: 10px 0;
   float: left;
+  margin-right: 30px;
 }
 
 .menu ul {
@@ -105,15 +129,6 @@ nav #header-buttons {
   text-align: right;
 }
 
-#header-buttons a {
-  text-transform: uppercase;
-  border-radius: 4px;
-  font-size: 13px;
-  height: 80px;
-  line-height: 80px;
-  margin-right: 16px;
-}
-
 #header-buttons i {
   font-size: 18px;
   margin-right: 1px;
@@ -124,19 +139,8 @@ nav #header-buttons {
   padding: 11px 24px;
 }
 
-#header-buttons a.button-blue:hover {
+#header-buttons a.hover-blue:hover {
   background-color: #001A4F;
-  color: #fff;
-}
-
-#header-buttons a:nth-child(2) {
-  background-color: #64DE82;
-  color: #28a745;
-  padding: 12px 24px;
-}
-
-#header-buttons a.button-green:hover {
-  background-color: #20c997;
   color: #fff;
 }
 
@@ -146,14 +150,50 @@ nav #header-buttons {
 
 /* Header - Jumbotron */
 #jumbotron {
+  padding-top: 80px;
   width: 100%;
+  background-color: #031D51;
+  background-image: url('https://www.fluentify.com/home/wp-content/uploads/2020/01/fluentify-cover-privati-scaled.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
 
-  height: 400px;
-  background-color: pink;
+#jumbotron::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 80px;
+  left: 0px;
+  width: 100%;
+  height: calc(100% - 80px);
+  background: linear-gradient(270deg, transparent 0%, #001A4F 100%);
+  z-index: 1;
+}
+
+.jumbotron-content {
+  width: 75%;
+  padding: 150px 0 200px;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+.jumbotron-content h4 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.jumbotron-content h1 {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.jumbotron-content p {
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
 /* Main */
-main {
-  width: 100%;
-  height: 1500px;
-}
