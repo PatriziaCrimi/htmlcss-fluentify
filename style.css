@@ -6,10 +6,7 @@
 
 body {
   font-family: 'Maven Pro', sans-serif;
-}
-
-section {
-  width: 100%;
+  font-weight: 400;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -20,7 +17,7 @@ h1, h2, h3, h4, h5, h6 {
 h2 {
   font-size: 40px;
   color: #6c757d;
-  line-height: 45px;
+  line-height: 48px;
 }
 
 h3 {
@@ -31,7 +28,7 @@ h3 {
 
 p {
   color: #727272;
-  font-size: 17px;
+  font-size: 18px;
   line-height: 26px;
 }
 
@@ -63,6 +60,7 @@ a.button {
   height: 80px;
   line-height: 80px;
   margin-right: 16px;
+  font-weight: 500;
 }
 
 a.button-green {
@@ -86,6 +84,7 @@ nav {
   left: 0px;
   z-index: 5;
   box-shadow: 0px 0.5px 4px 0px rgba(0, 0, 0, 0.3);
+  font-weight: 500;
 }
 
 nav .container::after {
@@ -230,10 +229,14 @@ nav #header-buttons {
 
 a.dark-hover:hover {
     color: #fff;
-    filter: brightness(0.8);
+    filter: brightness(0.85);
 }
 
 /* Main */
+
+section {
+  width: 100%;
+}
 
 /* Main - First Section - Information */
 section#information .container {
@@ -247,15 +250,13 @@ section#information .container::after {
 }
 
 section#information .info-picture {
-  width: calc(50% - 10px);
+  width: calc(50%);
   float: left;
-  margin-right: 10px;
 }
 
 section#information .info-content {
-  width: calc(50% - 10px);
+  width: calc(50%);
   float: left;
-  margin-left: 10px;
 }
 
 .info-content h2 {
@@ -391,6 +392,10 @@ section#packages {
   background-color: #294681;
 }
 
+section#packages .container {
+  padding: 55px 0;
+}
+
 section#packages .container::after {
   content: '';
   display: table;
@@ -405,8 +410,21 @@ section#packages .packages-title {
 section#packages .packages-text {
   float: left;
   width: 50%;
+  padding-left: 20px;
 }
 
 section#packages h2, #packages p {
   color: #fff;
+}
+
+/* Footer */
+footer {
+  background-color: #001A4F;
+  width: 100%;
+  color: #fff;
+}
+
+footer.wrapper {
+  width: 80%;
+  margin: 0 auto;
 }
