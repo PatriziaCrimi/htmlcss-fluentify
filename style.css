@@ -8,13 +8,8 @@ body {
   font-family: 'Maven Pro', sans-serif;
 }
 
-body a {
-  text-decoration: none;
-  color: inherit;
-}
-
-body li {
-  list-style-type: none;
+section {
+  width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -24,8 +19,8 @@ h1, h2, h3, h4, h5, h6 {
 
 h2 {
   font-size: 40px;
-  color: #727272;
-  margin-bottom: 50px;
+  color: #6c757d;
+  line-height: 45px;
 }
 
 h3 {
@@ -36,12 +31,21 @@ h3 {
 
 p {
   color: #727272;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 26px;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style-type: none;
+}
+
 .container {
-  width: 70%;
+  width: 65%;
   height: 100%;
   margin: 0 auto;
 }
@@ -63,13 +67,8 @@ a.button {
 
 a.button-green {
   background-color: #64DE82;
-  color: #28a745;
+  color: #337142;
   padding: 12px 24px;
-}
-
-a.hover-green:hover {
-  background-color: #20c997;
-  color: #fff;
 }
 
 /* Header */
@@ -86,6 +85,7 @@ nav {
   top: 0px;
   left: 0px;
   z-index: 5;
+  box-shadow: 0px 0.5px 4px 0px rgba(0, 0, 0, 0.3);
 }
 
 nav .container::after {
@@ -166,6 +166,11 @@ nav #header-buttons {
   color: #fff;
 }
 
+#header-buttons a.button-green:hover {
+  color: #fff;
+  filter: brightness(1.08);
+}
+
 #header-buttons a:last-child {
   margin-right: 0px;
 }
@@ -220,13 +225,19 @@ nav #header-buttons {
 .jumbotron-content p {
   font-size: 18px;
   color: #fff;
+  width: 80%;
+}
+
+a.dark-hover:hover {
+    color: #fff;
+    filter: brightness(0.8);
 }
 
 /* Main */
 
 /* Main - First Section - Information */
 section#information .container {
-  padding: 150px;
+  padding: 150px 0px;
 }
 
 section#information .container::after {
@@ -235,19 +246,21 @@ section#information .container::after {
   clear: both;
 }
 
-section#information img {
-  width: 50%;
+section#information .info-picture {
+  width: calc(50% - 10px);
   float: left;
+  margin-right: 10px;
 }
 
 section#information .info-content {
-  width: 50%;
+  width: calc(50% - 10px);
   float: left;
+  margin-left: 10px;
 }
 
 .info-content h2 {
-  width: 80%;
-  line-height: 50px;
+  width: 90%;
+  margin-bottom: 50px;
 }
 
 .info-content h2 > span {
@@ -271,6 +284,7 @@ section#requirements .container {
 
 section#requirements h2 {
   text-align: center;
+  margin-bottom: 35px;
 }
 
 section#requirements .requirements-wrapper::after {
@@ -292,7 +306,99 @@ section#requirements .requirements-box {
   margin-bottom: 10px;
 }
 
-/* Main - Third Section - */
-.third div {
-  background-color: blue;
+/* Main - Third Section - Mobile */
+section#mobile {
+  background-color: #011B50;
+}
+
+section#mobile .container {
+}
+
+section#mobile .container::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+section#mobile .mobile-text {
+  float: left;
+  width: 50%;
+  color: #fff;
+  margin-top: 80px;
+}
+
+.mobile-text h2 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.mobile-text p {
+  color: #fff;
+  margin-bottom: 25px;
+  width: 80%;
+}
+
+.mobile-text a {
+  color: #64DE82;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.mobile-text a:hover {
+  color: rgba(100, 222, 130, 9);
+  filter: brightness(0.7);
+}
+
+section#mobile .mobile-picture {
+  float: left;
+  width: 50%;
+}
+
+.mobile-picture img {
+  width: 361px;
+  height: 360px;
+  display: block;
+  margin: 0px auto;
+}
+
+/* Main - Fourth Section - Security */
+section#security .container::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+section#security .security-picture {
+  float: left;
+  width: 50%;
+}
+
+section#security .security-text {
+  float: left;
+  width: 50%;
+}
+
+/* Main - Fifth Section - Packages */
+section#packages {
+  background-color: #294681;
+}
+
+section#packages .container::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+section#packages .packages-title {
+  float: left;
+  width: 50%;
+}
+
+section#packages .packages-text {
+  float: left;
+  width: 50%;
+}
+
+section#packages h2, #packages p {
+  color: #fff;
 }
